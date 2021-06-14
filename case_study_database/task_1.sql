@@ -74,7 +74,7 @@ values
 
 create table khach_hang(
 id_khach_hang int primary key ,
-id_loai_khach int references loai_khach(id_loai_khach),
+id_loai_khach int references loai_khach(id_loai_khach) on delete cascade on update cascade,
 ho_ten varchar(45) ,
 ngay_sinh date ,
 so_cmnd varchar(45),
@@ -120,8 +120,8 @@ dien_tich int ,
 so_tang int ,
 so_nguoi_toi_da int,
 chi_phi_thue double,
-id_kieu_thue int references kieu_thue(id_kieu_thue),
-id_loai_dich_vu int references loai_dich_vu(id_loai_dich_vu),
+id_kieu_thue int references kieu_thue(id_kieu_thue) on delete cascade on update cascade,
+id_loai_dich_vu int references loai_dich_vu(id_loai_dich_vu) on delete cascade on update cascade,
 trang_thai varchar(45)
 );
 insert into dich_vu
@@ -145,9 +145,9 @@ values
 
 create table hop_dong(
 id_hop_dong int primary key,
-id_nhan_vien int references nhan_vien(id_nhan_vien),
-id_khach_hang int references khach_hang(id_khach_hang),
-id_dich_vu int references dich_vu(id_dich_vu),
+id_nhan_vien int references nhan_vien(id_nhan_vien) on delete cascade on update cascade,
+id_khach_hang int references khach_hang(id_khach_hang) on delete cascade on update cascade,
+id_dich_vu int references dich_vu(id_dich_vu) on delete cascade on update cascade,
 ngay_lam_hop_dong date ,
 ngay_ket_thuc date ,
 tien_dat_coc int
@@ -161,8 +161,8 @@ values
 
 create table hop_dong_chi_tiet(
 id_hop_dong_chi_tiet int primary key ,
-id_hop_dong int references hop_dong(id_hop_dong),
-id_dich_vu_di_kem int references dich_vu_di_kem(id_dich_vu_di_kem),
+id_hop_dong int references hop_dong(id_hop_dong) on delete cascade on update cascade,
+id_dich_vu_di_kem int references dich_vu_di_kem(id_dich_vu_di_kem) on delete cascade on update cascade,
 so_luong int
 );
 

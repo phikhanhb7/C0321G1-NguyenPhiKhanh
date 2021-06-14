@@ -1,9 +1,10 @@
+
 CREATE DATABASE QuanLySinhVien;
 use  QuanLySinhVien;
 
 CREATE TABLE Class
 (
-    ClassID   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ClassID   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     ClassName VARCHAR(60) NOT NULL,
     StartDate DATETIME    NOT NULL,
     Status    BIT
@@ -16,10 +17,8 @@ CREATE TABLE Student
     Address     VARCHAR(50),
     Phone       VARCHAR(20),
     Status      BIT,
-    ClassId     INT         NOT NULL,
-    FOREIGN KEY (ClassId) REFERENCES Class (ClassID)
-);
-
+    ClassId     INT         NOT NULL REFERENCES Class (ClassID) on delete cascade 
+   );
 
 CREATE TABLE Subject(
 	 SubId INT NOT NULL PRIMARY KEY,
