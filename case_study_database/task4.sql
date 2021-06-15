@@ -12,6 +12,6 @@ from loai_khach ;
 select kh.id_khach_hang, ho_ten,count(id_hop_dong) 'số lần đặt phòng'
 from khach_hang kh
 join hop_dong hd on kh.id_khach_hang = hd.id_khach_hang
-where id_loai_khach = 4 
+where id_loai_khach = 1 
 group by hd.id_khach_hang
 order by  'số lần đặt phòng';
