@@ -2,7 +2,13 @@
 
 use quan_ly_furama ;
 
-select dvdk.id_dich_vu_di_kem,ten_dich_di_kem,gia,don_vi,trang_thai_kha_dung, count(hdct.so_luong) as 'So Luong'
+select dvdk.id_dich_vu_di_kem, dvdk.ten_dich_di_kem,
+dvdk.gia,dvdk.don_Vi,dvdk.trang_thai_kha_dung,
+ sum(hdct.so_luong)  as 'so_lan_su_dung'
 from dich_vu_di_kem dvdk
-join hop_dong_chi_tiet hdct on hdct.id_dich_vu_di_kem = dvdk.id_dich_vu_di_kem
-group by dvdk.id_dich_vu_di_kem ;
+join hop_dong_chi_tiet hdct on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+group by dvdk.id_dich_vu_di_kem
+having so_lan_su_dung >= all (select  sum(hop_dong_chi_tiet.so_luong) 
+				from hop_dong_chi_tiet
+                group by id_dich_vu_di_kem
+				);
