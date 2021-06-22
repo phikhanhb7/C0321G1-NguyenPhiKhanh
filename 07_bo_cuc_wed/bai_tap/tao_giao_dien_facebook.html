@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+        #header{
+            background: #3d96ff;
+            width: 100%;
+            height: 70px;
+            border: 1px solid;
+        }
+        #header img{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 30px;
+            top : 25px;
+            border-radius: 5px;
+        }
+        #header input{
+            width:200px;
+            height: 25px;
+            margin-top: 10px;
+            position: absolute;
+            left: 80px;
+        }
+        #header ul{
+            list-style-type: none;
+            margin-top: 5px;
+        }
+        #header li {
+            display: inline;
+            margin-left: 40px;
+        }
+        #header svg{
+            width: 28px;
+            height: 28px;
+        }
+        .row{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #left-content , #sidebar {
+            background: #cfd7e3;
+            min-height: 700px;
+        }
+        #left-content ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #left-content li {
+            margin: 50px ;
+        }
+        #left-content li a{
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+        }
+        #left-content li img{
+            width: 36px;
+            height: 36px;
+        }
+        #main img{
+            width: 350px;
+            height: 350px;
+        }
+        #main p{
+            text-align: left;
+            word-wrap: normal;
+        }
+        #sidebar ul{
+            list-style-type: none;
+        }
+        #sidebar li img{
+            width: 150px;
+            height: 120px;
+            margin-top: 30px;
+        }
+        #sidebar li p{
+            font-weight: bold;
+        }
+        #sidebar li p a{
+            text-decoration: none;
+            color: #808e8f;
+            font-size: 13px;
+            margin-top: 2px;
+        }
+        [class*="col-"] {
+            width: 100%;
+        }
+        @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .col-m-1 {width: 8.33%;}
+            .col-m-2 {width: 16.66%;}
+            .col-m-3 {width: 25%;}
+            .col-m-4 {width: 33.33%;}
+            .col-m-5 {width: 41.66%;}
+            .col-m-6 {width: 50%;}
+            .col-m-7 {width: 58.33%;}
+            .col-m-8 {width: 66.66%;}
+            .col-m-9 {width: 75%;}
+            .col-m-10 {width: 83.33%;}
+            .col-m-11 {width: 91.66%;}
+            .col-m-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+<div id="header" class="row">
+    <div class="col-4">
+        <img src="https://ml40nihdhc0m.i.optimole.com/A8QZtao-FqI_z36y/w:auto/h:auto/q:auto/https://vietproducts.vn/wp-content/uploads/2017/07/Facebook-icon-1.png">
+        <input type="text" placeholder="Tìm kiếm...">
+    </div>
+    <div class="col-4">
+        <ul>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                </svg>
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn" viewBox="0 0 16 16">
+                    <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                    <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+                </svg>
+            </li>
+        </ul>
+    </div>
+    <div class="col-4">
+        <ul>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+                    <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                </svg>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div id="left-content" class="col-2 col-m-2">
+        <ul>
+            <li>
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png">
+                <a href="#">Bạn bè</a>
+            </li>
+            <li>
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png">
+                <a href="#">Nhóm</a>
+            </li>
+            <li>
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png">
+                <a href="#">Watch</a>
+            </li>
+            <li>
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/QAyfjudAqqG.png">
+                <a href="#">Sự kiện</a>
+            </li>
+            <li>
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png">
+                <a href="#">Trang</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main" class="col-8 col-m-8">
+        <h2>Đặt an toàn của người dân lên trên hết</h2>
+        <small>Thứ Hai, 24/05/2021, 10:16 [GMT+7]</small>
+        <p><strong>
+            Đà Nẵng bước vào cuộc chiến chống Covid-19 lần thứ 3 từ đầu tháng 5 với tâm thế sẵn sàng, chủ động, bình tĩnh ứng phó với mọi tình huống và đặt sự an toàn,
+            lợi ích của người dân lên trên hết. Đến nay, về cơ bản tình hình dịch bệnh đã được khống chế. Báo Đà Nẵng có cuộc trao đổi với Phó Chủ tịch UBND thành phố,
+            Phó trưởng Ban Chỉ đạo phòng, chống Covid-19 thành phố Lê Quang Nam xung quanh vấn đề này.</strong>
+        </p>
+        <img src="https://baodanang.vn/dataimages/202105/original/images1607274_L__Quang_Nam.jpg" alt="">
+        <p><strong>Phó Chủ tịch UBND thành phố Lê Quang Nam cho biết:</strong></p>
+        <p>
+            - Chúng ta có hơn 8 tháng kể từ ngày 28-8-2020 không ghi nhận ca mắc Covid-19
+            do lây lan trong cộng đồng. Nhưng Đà Nẵng là trung tâm phát triển du lịch, đầu
+            tư, văn hóa, xã hội, thu hút số lượng lớn người lao động, khách du lịch, nhà
+            đầu tư trong và ngoài nước. Bên cạnh đó, tình trạng nhập cảnh trái phép tồn tại trên cả nước nên nguy cơ lây lan dịch bệnh luôn tiềm ẩn.
+        </p>
+    </div>
+    <div id="sidebar" class="col-2 col-m-2">
+        <ul>
+            <li>
+                <img src="https://scontent.fdad3-3.fna.fbcdn.net/v/t45.1600-4/cp0/q90/spS444/p296x100/140535220_23847623552610337_6982614578570175961_n.png.jpg?_nc_cat=1&ccb=1-3&_nc_sid=67cdda&_nc_ohc=9D3QjC0GBCMAX_XCOrs&_nc_ht=scontent.fdad3-3.fna&tp=31&oh=a26b1ca044c8e52058f658d4db344949&oe=60AFC5B7">
+                <p>Game tam quốc được mong chờ nhất<br>
+                    <a href="#">chanlong.vn</a></p>
+            </li>
+            <li>
+                <img src="https://scontent.fdad3-3.fna.fbcdn.net/v/t45.1600-4/cp0/q75/spS444/p296x100/189576741_6247564245078_1760545118266105775_n.jpg?_nc_cat=1&ccb=1-3&_nc_sid=67cdda&_nc_ohc=iL9ej0_9wroAX-UIDvV&_nc_ht=scontent.fdad3-3.fna&tp=31&oh=8a0428b54b96b17c931dfde852d7edbc&oe=60AFE212">
+                <p>Nhận quà liền tay<br>
+                    <a href="#">game8x.vn</a></p>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

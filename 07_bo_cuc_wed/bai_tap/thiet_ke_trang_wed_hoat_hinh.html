@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+        header{
+            position: fixed;
+            top:0;
+            width: 100%;
+            height: 70px;
+            background: #e1e1e1;
+            font-style: italic;
+        }
+        header h1{
+            color: black;
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+        header h1 span{
+            background: red;
+            color: white;
+            border-radius: 5px;
+        }
+        nav{
+            width: 100%;
+            height: 50px;
+            margin-top: 80px;
+            padding-left: 150px;
+            background: #e1e1e1;
+        }
+        nav li {
+            position: relative;
+            float: left;
+            list-style: none;
+            text-align: center;
+        }
+        nav li a{
+            width: 150px;
+            height: 30px;
+            border-right: 1px solid black;
+            padding-right: 50px;
+            margin: 10px;
+            display: block;
+        }
+        nav ul :hover{
+            color: red;
+        }
+        aside{
+            background: #e1e1e1;
+            margin: 10px;
+            height: 650px;
+        }
+        aside div{
+            margin-left: 20px;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        aside div iframe{
+            width : 250px;
+            height: 150px;
+        }
+        section {
+            margin-top: 10px;
+            text-align: center;
+            height: 650px;
+        }
+        section div{
+            margin: 10px 40px;
+            word-wrap: normal;
+        }
+        section div p{
+            text-align: left;
+        }
+        footer{
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            background: #e1e1e1;
+            clear: both;
+        }
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+        @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .col-m-1 {width: 8.33%;}
+            .col-m-2 {width: 16.66%;}
+            .col-m-3 {width: 25%;}
+            .col-m-4 {width: 33.33%;}
+            .col-m-5 {width: 41.66%;}
+            .col-m-6 {width: 50%;}
+            .col-m-7 {width: 58.33%;}
+            .col-m-8 {width: 66.66%;}
+            .col-m-9 {width: 75%;}
+            .col-m-10 {width: 83.33%;}
+            .col-m-11 {width: 91.66%;}
+            .col-m-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Phim <span>hoạt hình</span></h1>
+</header>
+<nav>
+    <ul>
+        <li><a>Phim hoạt hình</a></li>
+        <li><a>Phim hoạt hình yêu thích</a></li>
+        <li><a>Nhân vật hoạt hình</a></li>
+        <li><a>Góp ý</a></li>
+    </ul>
+</nav>
+<main class="row">
+    <aside class="col-3 col-m-3">
+        <div>
+            <iframe  src="https://www.youtube.com/embed/-VT5A2ahI2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Doremon tập 587 || Bảo bối hoán đổi mẹ</p>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/6LiOvVmsahY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Hoạt Hình Doraemon - Nàng Tiên Ống Tre Của Nobita</p>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/w3dpMRg8NgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Hoạt Hình Doraemon - Khi Chỉ Có 2 Người, Họ Làm Gì?</p>
+        </div>
+    </aside>
+    <section class="col-8 col-m-8">
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1Mb0Fe73Mkw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>
+                Tải ỨNG DỤNG POPS Kids để xem trọn bộ 500 tập Doraemon: https://popskids.onelink.me/X36W/DRMYT​
+                Hoạt Hình Doraemon - Đôi Tay To Lớn Của Robot Khổng Lồ -Xem trọn bộ DORAEMON trên ỨNG DỤNG POPS Kids
+                Ứng dụng POPS Kids là app giáo dục, giải trí hàng đầu cho trẻ em với nội dung an toàn và đa dạng do POPS Worldwide phát triển. Ứng dụng được thiết kế đơn giản và dễ sử dụng nhất với những nội dung dựa trên nhu cầu của các bạn nhỏ qua các chuyên mục âm nhạc, giải trí và giáo dục.Với kho nội dung đa dạng, thường xuyên được cập nhật và kiểm soát chặt chẽ, POPS Kids là ngôi nhà giải trí bổ ích, an toàn cho bé và bố mẹ yên tâm khi trẻ trải nghiệm ứng dụng.
+                ------------
+                Truy cập website POPS Kids để xem trọn bộ 500 tập Doraemon: https://kids.pops.vn/
+                Kênh YouTube POPS Kids: www.youtube.com/popskids​
+                Facebook POPS Kids: https://www.facebook.com/pops.kids​
+            </p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Ⓒ 2017 - Thiết kế web bởi trang hoathinhvn.net</p>
+</footer>
+</body>
+</html>

@@ -93,16 +93,19 @@ body {
 
 
 }
-#main #right .menu_right h3 {
+#main #right .menu_right div {
     background: #35ddff url("../text_css/icon_menu.png") no-repeat;
-    height: 80px;
+    /*height: 80px;*/
     margin-top: 0px;
     font-size: 14px;
     color: red;
-    text-indent: 30px;
+    /*text-indent: 30px;*/
     padding-top: 10px;
+    display: flex;
 }
-
+.menu_right h3{
+    align-self: center;
+}
 #footer {
     height: 30px;
     background: blueviolet;
