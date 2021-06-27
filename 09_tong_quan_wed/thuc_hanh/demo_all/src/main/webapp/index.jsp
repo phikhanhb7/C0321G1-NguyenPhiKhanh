@@ -42,7 +42,7 @@
               class="img-fluid  " src="../img/logo_tripadvisor/logo_tripadvisor.png"
       /></a>
   </div>
-  <div class="col-6 text-right"> <span>Nguyễn Phương Nam</span>
+  <div class="col-6 text-right"> <span>Nguyễn Phi Khanh</span>
   </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark  container-fluid font-weight-bolder px-0 text-white" id="nav-bar-sticky"
