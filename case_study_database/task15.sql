@@ -8,7 +8,7 @@ from nhan_vien nv
     join trinh_do td on td.id_trinh_do = nv.id_trinh_do
     join bo_phan bp on bp.id_bo_phan = nv.id_bo_phan
     join hop_dong hd on hd.id_nhan_vien = nv.id_nhan_vien
-where (year(ngay_lam_hop_dong) = 2018 or 2019)
+where (year(ngay_lam_hop_dong) = 2018 or 2019 )
 		and "so lan" <=3 
 group by nv.id_nhan_vien ;
     
