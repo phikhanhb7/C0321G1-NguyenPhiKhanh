@@ -16,7 +16,7 @@ public class ProductRepository {
     public ProductRepository() {
     }
     private final String SELECT_ALL_PRODUCT = "select * from product;";
-    private final String SELECT_ALL_CATEGORY = "select * from catagory;";
+    private final String SELECT_ALL_CATAGORY = "select * from catagory;";
     private final String INSERT_INTO_PRODUCT = "insert into product(product_name,product_price,\n" +
             "product_quantity,product_color,product_desciption,catagory_id)\n" +
             "values(?,?,?,?,?,?);";
@@ -59,7 +59,7 @@ public class ProductRepository {
         List<Category> categoryList = new ArrayList<>();
         Connection connection = baseRepository.getConnection();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_CATEGORY);
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_CATAGORY);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 int id = resultSet.getInt("catagory_id");
