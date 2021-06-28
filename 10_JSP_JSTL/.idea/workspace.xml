@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="15b2b4ba-60c4-410f-bea5-ffe6146b5c74" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/java/controllers/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/java/model/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/assert/img/avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/bootstrap/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/bootstrap/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/bootstrap/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/bootstrap/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/bootstrap/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/sss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thuc_hanh/src/main/webapp/dictionary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/WEB-INF/classes/model/bean/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/WEB-INF/classes/model/bean/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/WEB-INF/classes/model/repository/BaseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/WEB-INF/classes/model/repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/WEB-INF/classes/model/service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/WEB-INF/classes/model/service/impl/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/bootraps_min/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/bootraps_min/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/bootraps_min/dataTables.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/bootraps_min/dataTables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/bootraps_min/jquery-3.6.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/bootraps_min/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/bootraps_min/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/views/product/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/views/product/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.48/webapps/ROOT/views/product/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo_project_hoan_chinh/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/demo_project_hoan_chinh/.idea/gradle.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="E:\Module3\C0321G1-NguyenPhiKhanh\10_JSP_JSTL\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1uZDP4NY78fUziA9KRv6VKdnFDO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15b2b4ba-60c4-410f-bea5-ffe6146b5c74" name="Default Changelist" comment="" />
+      <created>1624864190024</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624864190024</updated>
+      <workItem from="1624864194277" duration="361000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
