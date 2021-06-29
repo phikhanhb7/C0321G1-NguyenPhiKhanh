@@ -15,34 +15,36 @@
 <p style="margin-left: 50px">
     <a href="/product">Back to Product list</a>
 </p>
-<div style="margin-left: 50px">
-    <table style="border: 1px solid">
-        <tr>
-            <td>id: </td>
-            <td>${product.id}</td>
-        </tr>
-        <tr>
-            <td>Name: </td>
-            <td>${product.name}</td>
-        </tr>
-        <tr>
-            <td>Price: </td>
-            <td>${product.price}</td>
-        </tr>
-        <tr>
-            <td>quantity: </td>
-            <td>${product.quantity}</td>
-        </tr>
-        <tr>
-            <td>color: </td>
-            <td>${product.color}</td>
-        </tr>
-        <tr>
-            <td>discription: </td>
-            <td>${product.discription}</td>
-        </tr>
 
-    </table>
-</div>
+    <div style="margin-left: 50px">
+        <table style="border: 1px solid">
+            <tr>
+                <td>id: </td>
+                <td>${product.id}</td>
+            </tr>
+            <tr>
+                <td>Name: </td>
+                <td>${product.name}</td>
+            </tr>
+            <tr>
+                <td>Price: </td>
+                <td>${product.price}</td>
+            </tr>
+            <tr>
+                <td>quantity: </td>
+                <td>${product.quantity}</td>
+            </tr>
+            <tr>
+                <td>color: </td>
+                <td>${product.color}</td>
+            </tr>
+            <tr>
+                <td>discription: </td>
+                <td>${product.discription}</td>
+            </tr>
+
+        </table>
+    </div>
+
 </body>
 </html>

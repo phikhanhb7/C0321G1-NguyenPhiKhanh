@@ -42,32 +42,71 @@
                 <th scope="col">Quantity</th>
                 <th scope="col">Color</th>
                 <th scope="col">discription</th>
-                <td>Edit</td>
-                <td>Delete</td>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             </thead>
             <tbody>
             <c:forEach items="${products}" var="product">
                 <tr>
                     <td>${product.id}</td>
-                    <td><a href="/product?action=view&id=${product.id}"></a>${product.name}</td>
+                    <td><a href="/product?action=view&id=${product.id}">${product.name}</a></td>
                     <td>${product.price}</td>
                     <td>${product.quantity}</td>
                     <td>${product.color}</td>
                     <td>${product.discription}</td>
                     <td><a href="/product?action=edit&id=${product.id}">Edit</a></td>
-                    <td><a href="/product?action=delete&id=${product.id}">Delete</a></td>
+                    <td>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                                onclick="myFunction('${product.id}','${product.name}')">
+                            Delete
+                        </button>
+                    </td>
                 </tr>
 
             </c:forEach>
-
-
             </tbody>
         </table>
     </div>
     <div class="col-2"></div>
 </div>
 
+<!-- Button trigger modal -->
+<%--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">--%>
+<%--    Launch demo modal--%>
+<%--</button>--%>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="/product">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Note</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                    <input type="hidden" name="action" value="delete">
+                    <input type="hidden" id="idProduct" name="id">
+                    <div class="modal-body">
+                        Bạn có muốn xóa <span id="nameProduct"></span>không ?
+                    </div>
+                    <div class="modal-footer">
+                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-danger btn-ok" value="Delete">
+                </div>
+                </form>
+            </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+    function myFunction(id,name) {
+        document.getElementById("idProduct").value = id;
+        document.getElementById('nameProduct').innerText = name ;
+    }
+</script>
 
 <script src="bootstrap/jquery-3.6.0.min.js"></script>
 <script src="bootstrap/popper.min.js"></script>

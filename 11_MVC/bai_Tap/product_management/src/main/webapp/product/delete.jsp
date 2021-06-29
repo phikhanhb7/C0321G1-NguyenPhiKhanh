@@ -50,13 +50,52 @@
                 </tr>
 
                 <tr>
-                    <td><input type="submit" value="Delete product"></td>
+                    <td>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                                onclick="myFunction(${product.id})">
+                            Delete
+                        </button>
+                    </td>
                     <td></td>
                 </tr>
             </table>
         </fieldset>
     </form>
 </div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/product?action=delete" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Chap nhan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ban co muon xoa
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-danger btn-ok" value="Delete">
+                    <input type="hidden" id="id" name="id">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    function myFunction(id) {
+        document.getElementById("id").value = id;
+    }
+</script>
+
+
 
 <script src="bootstrap/jquery-3.6.0.min.js"></script>
 <script src="bootstrap/popper.min.js"></script>

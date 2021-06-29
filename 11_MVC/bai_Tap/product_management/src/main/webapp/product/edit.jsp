@@ -12,12 +12,17 @@
     <title>Title</title>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/dataTables.bootstrap.min.css">
+    <style>
+        .message{
+            color: #005cbf;
+        }
+    </style>
 </head>
 <body>
 
 <h1>Edit customer</h1>
 
-<p>
+<p >
     <c:if test='${requestScope["message"] != null}'>
         <span class="message">${requestScope["message"]}</span>
     </c:if>
@@ -57,6 +62,10 @@
             </tr>
         </table>
     </fieldset>
+
+    <p>
+        <a href="/product">Back to Product list</a>
+    </p>
 </form>
 
 <script src="bootstrap/jquery-3.6.0.min.js"></script>
