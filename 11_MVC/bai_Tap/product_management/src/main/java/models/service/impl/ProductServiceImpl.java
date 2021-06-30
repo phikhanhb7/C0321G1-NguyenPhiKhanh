@@ -1,53 +1,44 @@
 package models.service.impl;
 
 import models.bean.Product;
+import models.repository.product.ProductRepository;
+import models.repository.product.ProductRepositoryImpl;
 import models.service.IProduct;
 
 import java.util.*;
 
 public class ProductServiceImpl implements IProduct {
- private static Map<Integer,Product> productMap;
 
- static {
-     productMap = new HashMap<>();
-     productMap.put(1,new Product(1,"Iphone 5",3000,10,"Yellow","100%"));
-     productMap.put(2,new Product(2,"Iphone 6",4000,11,"Black","99%"));
-     productMap.put(3,new Product(3,"Iphone 7",5000,12,"While","98%"));
- }
+    ProductRepository repository = new ProductRepositoryImpl() ;
 
     @Override
     public List<Product> findAll() {
-        return new ArrayList<>(productMap.values());
+        return repository.findAll();
     }
 
     @Override
     public void save(Product product) {
-        productMap.put(product.getId(), product);
+        repository.save(product);
     }
 
     @Override
     public Product findById(int id) {
-        return productMap.get(id);
+        return repository.findById(id);
     }
 
     @Override
-    public void update(int id, Product product) {
-        productMap.put(id, product);
+    public boolean updateByID(int id, Product product) {
+        return repository.updateByID(id,product);
     }
 
+
     @Override
-    public void remove(int id) {
-        productMap.remove(id);
+    public boolean remove(int id) {
+      return   repository.remove(id);
     }
 
     @Override
     public List<Product> findByName(String name) {
-        List<Product> productList = new ArrayList<>();
-        for( Product item : productMap.values()){
-           if( item.getName().contains(name)){
-               productList.add(item);
-           }
-        }
-        return productList;
+        return repository.findByName(name);
     }
 }

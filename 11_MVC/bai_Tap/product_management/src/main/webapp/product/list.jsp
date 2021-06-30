@@ -10,8 +10,11 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/dataTables.bootstrap.min.css">
+
+
+
     <style>
         table{
             border: 1px solid;
@@ -33,10 +36,10 @@
 </p>
 <div class="row">
     <div class="col-10">
-        <table class="table table-striped">
+        <table id="tableProduct"  class="table table-striped">
             <thead>
             <tr>
-                <th scope="col">Id</th>
+                <th scope="col">STT</th>
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
@@ -47,9 +50,9 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${products}" var="product">
+            <c:forEach items="${products}" var="product" varStatus="a">
                 <tr>
-                    <td>${product.id}</td>
+                    <td>${a.count}</td>
                     <td><a href="/product?action=view&id=${product.id}">${product.name}</a></td>
                     <td>${product.price}</td>
                     <td>${product.quantity}</td>
@@ -90,7 +93,7 @@
                     <input type="hidden" name="action" value="delete">
                     <input type="hidden" id="idProduct" name="id">
                     <div class="modal-body">
-                        Bạn có muốn xóa <span id="nameProduct"></span>không ?
+                        Bạn có muốn xóa <span id="nameProduct" style="color: #7abaff"></span> không ?
                     </div>
                     <div class="modal-footer">
                     <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Cancel">
@@ -101,6 +104,13 @@
 
     </div>
 </div>
+
+<script src="../bootstrap/jquery-3.6.0.min.js"></script>
+<script src="../bootstrap/jquery.dataTables.min.js"></script>
+<script src="../bootstrap/dataTables.bootstrap4.min.js"></script>
+<script src="../bootstrap/popper.min.js"></script>
+<script src="../bootstrap/bootstrap.min.js"></script>
+
 <script type="text/javascript">
     function myFunction(id,name) {
         document.getElementById("idProduct").value = id;
@@ -108,9 +118,18 @@
     }
 </script>
 
-<script src="bootstrap/jquery-3.6.0.min.js"></script>
-<script src="bootstrap/popper.min.js"></script>
-<script src="bootstrap/bootstrap.min.js"></script>
-<script src="bootstrap/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tableProduct').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 4,
+
+        });
+    });
+</script>
+
+
+
 </body>
 </html>

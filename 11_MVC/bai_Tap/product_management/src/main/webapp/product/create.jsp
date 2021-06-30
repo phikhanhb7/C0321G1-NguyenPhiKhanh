@@ -32,7 +32,8 @@
     <p>
         <a href="/product">Back to customer list</a>
     </p>
-    <form method="post">
+    <form action="/product" method="post">
+        <input type="hidden" name="action" value="create">
         <fieldset>
             <legend>Customer information</legend>
             <table>

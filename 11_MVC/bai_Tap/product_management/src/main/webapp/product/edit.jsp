@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="bootstrap/dataTables.bootstrap.min.css">
     <style>
         .message{
-            color: #005cbf;
+            color: #20c997;
         }
     </style>
 </head>
@@ -34,7 +34,7 @@
         <table>
             <tr>
                 <td>id: </td>
-                <td><input type="text" name="id" id="id" value="${product.id}"></td>
+                <td><input type="text" name="id" id="id" value="${product.id}" readonly></td>
             </tr>
             <tr>
                 <td>name: </td>
