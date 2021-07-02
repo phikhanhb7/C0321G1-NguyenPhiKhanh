@@ -153,8 +153,8 @@ public class UserServlet extends HttpServlet {
 
 
     private void listUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<User> userList = userService.findAll();
-        request.setAttribute("userList", userList);
+        List<User> customerList = userService.findAll();
+        request.setAttribute("customerList", customerList);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/list.jsp");
         requestDispatcher.forward(request, response);
     }

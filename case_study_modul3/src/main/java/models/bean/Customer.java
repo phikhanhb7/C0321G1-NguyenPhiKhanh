@@ -12,6 +12,20 @@ public class Customer {
     private String customerAddress ;
     private int customerTypeId ;
 
+    public Customer(String customerCode, String customerName, String customerBirthday, int customerGender,
+                    String customerIdCard, String customerPhone, String customerEmail, String customerAddress,
+                    int customerTypeId) {
+        this.customerCode = customerCode;
+        this.customerName = customerName;
+        this.customerBirthday = customerBirthday;
+        this.customerGender = customerGender;
+        this.customerIdCard = customerIdCard;
+        this.customerPhone = customerPhone;
+        this.customerEmail = customerEmail;
+        this.customerAddress = customerAddress;
+        this.customerTypeId = customerTypeId;
+    }
+
     public Customer(int customerId, String customerCode, String customerName, String customerBirthday,
                     int customerGender, String customerIdCard, String customerPhone, String customerEmail,
                     String customerAddress, int customerTypeId) {

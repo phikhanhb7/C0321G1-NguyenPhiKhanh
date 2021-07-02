@@ -140,7 +140,7 @@ CREATE TABLE customer( -- khach hang
     customer_phone VARCHAR(45)  NOT NULL, -- sdt cua khach hang
     customer_email VARCHAR(45), -- email khach hang
     customer_address VARCHAR(45), -- dia chi khach hang
-    customer_gender bit(1)  NOT NULL, -- gioi tinh khach hang
+    customer_gender INT  NOT NULL, -- gioi tinh khach hang
     FOREIGN KEY (customer_type_id) REFERENCES customer_type(customer_type_id)   on delete cascade on update cascade
 );
 
