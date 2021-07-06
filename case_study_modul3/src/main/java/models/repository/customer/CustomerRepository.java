@@ -315,5 +315,48 @@ public class CustomerRepository implements ICustomerRepository{
 
     }
 
+    @Override
+    public Customer findByCode(String customerCode) {
+        Connection connection = DBConnection.getConnection();
+        Customer customer = null ;
+        PreparedStatement statement = null ;
+        ResultSet resultSet = null ;
+
+        if (connection != null){
+            try {
+                statement = connection.prepareStatement(SELECT_BY_CODE);
+                statement.setString(1,customerCode);
+                resultSet = statement.executeQuery() ;
+                while (resultSet.next()){
+                    int idCustomer = resultSet.getInt("customer_id");
+                    String byCode = resultSet.getString("customer_code");
+                    String name = resultSet.getString("customer_name");
+                    String dateOfBirth = resultSet.getString("customer_birthday");
+                    int sex = resultSet.getInt("customer_gender");
+                    String idCard = resultSet.getString("customer_id_card");
+                    String phoneNumber = resultSet.getNString("customer_phone");
+                    String email = resultSet.getNString("customer_email");
+                    String address = resultSet.getNString("customer_address");
+                    int idTypeCustomer = resultSet.getInt("customer_type_id");
+
+                    customer = new Customer(idCustomer,customerCode,name,dateOfBirth,sex,idCard,phoneNumber,email,
+                            address,idTypeCustomer);
+
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                try {
+                    resultSet.close();
+                    statement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                DBConnection.close();
+            }
+        }
+      return customer ;
+    }
+
 
 }

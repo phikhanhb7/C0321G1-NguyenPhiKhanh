@@ -20,4 +20,6 @@ public interface ICustomerRepository {
 
     List<CustomerType> findAllCustomerType();
 
+    Customer findByCode(String customerCode);
+
 }

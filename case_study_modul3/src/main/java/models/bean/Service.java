@@ -2,6 +2,7 @@ package models.bean;
 
 public class Service {
     private int serviceId ;
+    private String service_code ;
     private String serviceName ;
     private int serviceArea ;
     private double serviceCost ;
@@ -13,6 +14,45 @@ public class Service {
 
     private int serviceTypeId ;
     private int serviceRentTypeId ;
+
+    public String getService_code() {
+        return service_code;
+    }
+
+    public void setService_code(String service_code) {
+        this.service_code = service_code;
+    }
+
+    public Service(int serviceId, String service_code, String serviceName, int serviceArea, double serviceCost, int serviceMaxPeople, String serviceStandardRoom, String serviceDescriptionOtherConvenience, double servicePollArea, int serviceNumberOfFloors, int serviceTypeId, int serviceRentTypeId) {
+        this.serviceId = serviceId;
+        this.service_code = service_code;
+        this.serviceName = serviceName;
+        this.serviceArea = serviceArea;
+        this.serviceCost = serviceCost;
+        this.serviceMaxPeople = serviceMaxPeople;
+        this.serviceStandardRoom = serviceStandardRoom;
+        this.serviceDescriptionOtherConvenience = serviceDescriptionOtherConvenience;
+        this.servicePollArea = servicePollArea;
+        this.serviceNumberOfFloors = serviceNumberOfFloors;
+        this.serviceTypeId = serviceTypeId;
+        this.serviceRentTypeId = serviceRentTypeId;
+    }
+
+    public Service(String service_code, String serviceName, int serviceArea, double serviceCost, int serviceMaxPeople,
+                   String serviceStandardRoom, String serviceDescriptionOtherConvenience, double servicePollArea,
+                   int serviceNumberOfFloors, int serviceTypeId, int serviceRentTypeId) {
+        this.service_code = service_code;
+        this.serviceName = serviceName;
+        this.serviceArea = serviceArea;
+        this.serviceCost = serviceCost;
+        this.serviceMaxPeople = serviceMaxPeople;
+        this.serviceStandardRoom = serviceStandardRoom;
+        this.serviceDescriptionOtherConvenience = serviceDescriptionOtherConvenience;
+        this.servicePollArea = servicePollArea;
+        this.serviceNumberOfFloors = serviceNumberOfFloors;
+        this.serviceTypeId = serviceTypeId;
+        this.serviceRentTypeId = serviceRentTypeId;
+    }
 
     public Service(int serviceId, String serviceName, int serviceArea, double serviceCost, int serviceMaxPeople,
                    String serviceStandardRoom, String serviceDescriptionOtherConvenience, double servicePollArea,

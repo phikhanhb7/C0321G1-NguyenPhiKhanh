@@ -68,11 +68,15 @@ public class CustomerServlet extends HttpServlet {
         String customerAddress = request.getParameter("customerAddress");
         int customerTypeId = Integer.parseInt(request.getParameter("customerTypeId"));
 
-        Customer customer = new Customer(id,customerCode,customerName,customerBirthday,customerGender,customerIdCard,customerPhone,customerEmail,customerAddress,customerTypeId);
+        Customer customer = new Customer(customerCode,customerName,customerBirthday,customerGender,customerIdCard,customerPhone,customerEmail,customerAddress,customerTypeId);
 
         RequestDispatcher dispatcher;
         customerService.updateByID(id, customer);
         request.setAttribute("customer", customer);
+
+        List<CustomerType> customerTypeList = customerService.findAllCustomerType();
+        request.setAttribute("customerTypes",customerTypeList);
+
         request.setAttribute("message", "User information was updated");
         dispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
 
@@ -99,12 +103,36 @@ public class CustomerServlet extends HttpServlet {
         String customerAddress = request.getParameter("customerAddress");
         int customerTypeId = Integer.parseInt(request.getParameter("customerTypeId"));
 
-
-
         Customer customer = new Customer( customerCode,customerName,customerBirthday,customerGender,customerIdCard,customerPhone,customerEmail,customerAddress,customerTypeId);
-        customerService.save(customer);
+
+        List<String> errList = customerService.save(customer);
+
+        int checkFull = 0;
+        boolean check = false;
+        String msgCreate = null;
+        for (String string : errList){
+            if (string.equals("")){
+                checkFull++;
+            }
+        }
+        if (checkFull == 7){
+            check = true;
+        }
+        if (check){
+            msgCreate = "New Product was created";
+        }else {
+            msgCreate = "Create Fail";
+            request.setAttribute("customerFail",customer);
+        }
+        request.setAttribute("message",msgCreate);
+
+        request.setAttribute("errList",errList);
+
+        List<CustomerType> customerTypeList = customerService.findAllCustomerType();
+        request.setAttribute("customerType",customerTypeList);
+
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
-        request.setAttribute("message", "New Product was created");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -154,6 +182,8 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
      Customer customer = customerService.findById(id);
         request.setAttribute("customer", customerService.findById(id));
+        List<CustomerType> customerTypeList = customerService.findAllCustomerType();
+        request.setAttribute("customerTypes",customerTypeList);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/view.jsp");
         requestDispatcher.forward(request, response);
     }
@@ -168,6 +198,8 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
 
         request.setAttribute("customer",customerService.findById(id));
+        List<CustomerType> customerTypeList = customerService.findAllCustomerType();
+        request.setAttribute("customerTypes",customerTypeList);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
         try {
             requestDispatcher.forward(request,response);

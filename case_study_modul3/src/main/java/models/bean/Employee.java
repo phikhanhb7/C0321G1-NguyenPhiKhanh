@@ -15,6 +15,35 @@ public class Employee {
     private int divisionId;
     private String userName;
 
+    public Employee(String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary,
+                    String employeePhone, String employeeEmail, String employeeAddress, int positionId,
+                    int educationDegreeId, int divisionId) {
+        this.employeeName = employeeName;
+        this.employeeBirthday = employeeBirthday;
+        this.employeeIdCard = employeeIdCard;
+        this.employeeSalary = employeeSalary;
+        this.employeePhone = employeePhone;
+        this.employeeEmail = employeeEmail;
+        this.employeeAddress = employeeAddress;
+        this.positionId = positionId;
+        this.educationDegreeId = educationDegreeId;
+        this.divisionId = divisionId;
+    }
+
+    public Employee(int employeeId, String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.employeeBirthday = employeeBirthday;
+        this.employeeIdCard = employeeIdCard;
+        this.employeeSalary = employeeSalary;
+        this.employeePhone = employeePhone;
+        this.employeeEmail = employeeEmail;
+        this.employeeAddress = employeeAddress;
+        this.positionId = positionId;
+        this.educationDegreeId = educationDegreeId;
+        this.divisionId = divisionId;
+    }
+
     public Employee(int employeeId, String employeeName, String employeeBirthday, String employeeIdCard,
                     double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress,
                     int positionId, int educationDegreeId, int divisionId, String userName) {
